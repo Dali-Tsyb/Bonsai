@@ -28,12 +28,7 @@
                </p>
             </li>
          </ul>
-         <img
-            rel="preload"
-            class="intro-tree"
-            src="/img/tree.webP"
-            alt="bonsai tree"
-         />
+         <img class="intro-tree" src="/img/tree.png" alt="bonsai tree" />
       </div>
    </div>
 </template>
