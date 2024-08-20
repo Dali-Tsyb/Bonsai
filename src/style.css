@@ -12,6 +12,6 @@
    color: rgb(74, 74, 74);
 }
 :root {
-   background: url("/img/background.png") no-repeat center fixed;
+   background: url("/img/background.webp") no-repeat center fixed;
    background-size: cover;
 }
