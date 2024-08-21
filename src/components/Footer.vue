@@ -67,16 +67,15 @@ footer {
    justify-content: space-between;
 }
 .top > * {
-   border-left: 1px solid rgba(0, 0, 0, 0.175);
-   flex: 1;
+   border-right: 1px solid rgba(0, 0, 0, 0.175);
    display: flex;
    flex-direction: column;
    align-items: left;
 }
 .info,
 .help,
-.socials {
-   padding-left: 3vw;
+.company {
+   padding-right: 3vw;
 }
 .company div div,
 .info div div,
@@ -95,7 +94,7 @@ h6 {
    font-weight: 600;
    margin-bottom: 1vw;
 }
-.company {
+.socials {
    border: none;
 }
 .socials div {
@@ -146,10 +145,7 @@ button img {
    }
    .top {
       flex-wrap: wrap;
-      gap: 6vw 0;
-   }
-   .top > * {
-      flex: 1;
+      gap: 6vw 2.3vw;
    }
    .company div div,
    .info div div,
@@ -157,11 +153,16 @@ button img {
       font-size: 3vw;
       margin-bottom: 1vw;
    }
-   .company {
-      border: none;
+   .company, .info {
+      padding-right: 6vw;
    }
-   .info, .help {
-      padding-left: 5.4vw;
+   .socials {
+      border: none;
+      flex: 1;
+   }
+   .help {
+      border: none;
+      padding-right: 0;
    }
    h6 {
       font-size: 3.5vw;

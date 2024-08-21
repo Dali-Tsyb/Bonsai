@@ -27,6 +27,7 @@ const { cart, removeFromCart } = inject("cart");
       "photo name button"
       "photo price button";
    grid-template-rows: 1fr;
+   grid-template-columns: 2fr 5fr;
    gap: 0 1.4vw;
    margin-top: 1vw;
    justify-content: left;
@@ -97,4 +98,4 @@ img {
       width: 3vw;
    }
 }
- </style>
+</style>

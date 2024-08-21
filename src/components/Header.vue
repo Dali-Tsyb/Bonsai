@@ -10,19 +10,19 @@ defineProps({
    },
    totalItems: Number,
 });
-
 </script>
 
 <template>
    <header class="header">
       <div class="header-logo">БОНСАЙ.РФ</div>
       <ul class="header-menu">
-         <input
-            @input="onChangeSearchInput"
-            placeholder="Найти товар..."
-            type="text"
-            :class="{ show: isSearchVisible }"
-         />
+         <div class="input-container" :class="{ show: isSearchVisible }">
+            <input
+               @input="onChangeSearchInput"
+               placeholder="Найти товар..."
+               type="text"
+            />
+         </div>
          <li class="header-menu-search">
             <img
                @click="handleSearchClick"
@@ -82,16 +82,18 @@ header img {
    gap: 1.5vw;
 }
 input {
-   opacity: 0;
    padding: 0.2vw 0.4vw;
    border: 1px solid rgba(0, 0, 0, 0.379);
    background: rgba(255, 255, 255, 0.686);
    font-size: 1.1vw;
    width: 25vw;
-   transition: opacity 0.2s;
    color: rgba(0, 0, 0, 0.845);
 }
-input.show {
+.input-container {
+   opacity: 0;
+   transition: opacity 0.2s;
+}
+.input-container.show {
    opacity: 1;
 }
 input:focus {
@@ -106,7 +108,8 @@ input:focus {
    pointer-events: none;
    transition: all 0.2s;
 }
-.header-menu-cart:hover .cart, .cart:hover{
+.header-menu-cart:hover .cart,
+.cart:hover {
    opacity: 1;
    pointer-events: all;
 }
@@ -196,13 +199,25 @@ input:focus {
 }
 @media (width < 550px) {
    header {
-      padding: 2vw 3vw;
+      padding: 2.5vw 3vw;
    }
    header img {
       width: 4.8vw;
    }
    .header-logo {
       font-size: 4.5vw;
+   }
+   input {
+      font-size: 3.2vw;
+      width: 100%;
+   }
+   .input-container {
+      position: absolute;
+      right: 0;
+      top: 8vw;
+      width: 100%;
+      background:  rgba(237, 237, 237);
+      padding: 3vw;
    }
    .header-menu {
       gap: 4vw;
